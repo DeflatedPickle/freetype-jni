@@ -1,4 +1,4 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

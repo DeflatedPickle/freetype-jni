@@ -1,6 +1,6 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
-import com.mlomb.freetypejni.FreeTypeConstants.FT_Size_Request_Type;
+import com.mlomb.freetype.FreeTypeConstants.FT_Size_Request_Type;
 
 public class SizeRequest {
 

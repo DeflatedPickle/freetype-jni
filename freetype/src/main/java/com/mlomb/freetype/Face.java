@@ -1,9 +1,9 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
 import java.nio.ByteBuffer;
 
-import com.mlomb.freetypejni.FreeTypeConstants.FT_Kerning_Mode;
-import com.mlomb.freetypejni.Utils.Pointer;
+import com.mlomb.freetype.FreeTypeConstants.FT_Kerning_Mode;
+import com.mlomb.freetype.Utils.Pointer;
 
 /** A handle to a given typographic face object. A face object models a given typeface, in a given style. */
 public class Face extends Pointer {

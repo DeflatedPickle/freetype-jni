@@ -1,8 +1,7 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
-import com.mlomb.freetypejni.FreeTypeConstants.FT_Render_Mode;
-import com.mlomb.freetypejni.Utils.Pointer;
-import com.mlomb.freetypejni.Bitmap;
+import com.mlomb.freetype.FreeTypeConstants.FT_Render_Mode;
+import com.mlomb.freetype.Utils.Pointer;
 
 public class GlyphSlot extends Pointer {
 

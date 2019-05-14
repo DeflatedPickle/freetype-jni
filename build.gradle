@@ -1,0 +1,53 @@
+project("jni") {
+    apply plugin: 'cpp'
+    apply plugin: 'visual-studio'
+
+    // TODO: Generate the JNI headers on-build
+    
+    model {
+        flavors {
+            passing
+        }
+
+        buildTypes {
+            release
+        }
+
+        platforms {
+            x86_64 {
+                architecture "x86_64"
+            }
+        }
+
+        components {
+            freetype64(NativeLibrarySpec) {
+                targetPlatform "x86_64"
+
+                sources {
+                    cpp {
+                        source {
+                            srcDir "src/main/cpp/com/mlomb/freetype"
+                            include "**/*.cpp"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+project("freetype") {
+    apply plugin: 'java'
+
+    dependencies {
+        // TODO: Depend on the Jni sub-project
+        // implementation project(":jni")
+    }
+}
+project("example") {
+    apply plugin: 'java'
+
+    dependencies {
+        implementation project(":freetype")
+    }
+}

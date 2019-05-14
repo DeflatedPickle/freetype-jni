@@ -1,20 +1,19 @@
 import java.nio.ByteBuffer;
 
-import com.mlomb.freetypejni.Bitmap;
-import com.mlomb.freetypejni.Face;
-import com.mlomb.freetypejni.FreeType;
-import com.mlomb.freetypejni.FreeTypeConstants;
-import com.mlomb.freetypejni.GlyphMetrics;
-import com.mlomb.freetypejni.GlyphSlot;
-import com.mlomb.freetypejni.Library;
-import com.mlomb.freetypejni.SizeMetrics;
-import com.mlomb.freetypejni.SizeRequest;
-import com.mlomb.freetypejni.FreeTypeConstants.FT_Size_Request_Type;
+import com.mlomb.freetype.Bitmap;
+import com.mlomb.freetype.Face;
+import com.mlomb.freetype.FreeType;
+import com.mlomb.freetype.FreeTypeConstants;
+import com.mlomb.freetype.GlyphMetrics;
+import com.mlomb.freetype.GlyphSlot;
+import com.mlomb.freetype.Library;
+import com.mlomb.freetype.SizeMetrics;
+import com.mlomb.freetype.SizeRequest;
+import com.mlomb.freetype.FreeTypeConstants.FT_Size_Request_Type;
 
 public class Example {
-
-	public static void main(String args[]) throws Exception { // TODO Readable human examples.
-		String fontPath = "res/OpenSans-Regular.ttf";
+	public static void main(String[] args) throws Exception { // TODO Readable human examples.
+		String fontPath = ClassLoader.getSystemResource("OpenSans-Regular.ttf").getPath();
 
 		/* --- Init FreeType --- */
 		Library library = FreeType.newLibrary();
@@ -84,7 +83,7 @@ public class Example {
 		System.out.println("---------- Kerning -------------");
 		for (char a = ' '; a < '~'; a++) {
 			for (char b = ' '; b < '~'; b++) {
-				int kern = (int) face.getKerning(a, b).getHorizontalKerning();
+				int kern = face.getKerning(a, b).getHorizontalKerning();
 				if (kern != 0) {
 					System.out.println(a + " - " + b + " = " + kern);
 				}

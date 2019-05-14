@@ -1,4 +1,4 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
 /** This is a simple class wich contains the version information about FreeType. */
 public class LibraryVersion {
@@ -25,6 +25,6 @@ public class LibraryVersion {
 
 	@Override
 	public String toString() {
-		return major + "." + minor + "." + patch;
+		return major + "" + minor + "." + patch;
 	}
 }

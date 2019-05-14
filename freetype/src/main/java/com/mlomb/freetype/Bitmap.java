@@ -1,8 +1,8 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
 import java.nio.ByteBuffer;
 
-import com.mlomb.freetypejni.Utils.Pointer;
+import com.mlomb.freetype.Utils.Pointer;
 
 public class Bitmap extends Pointer {
 

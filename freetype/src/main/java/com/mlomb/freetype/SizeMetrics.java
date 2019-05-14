@@ -1,6 +1,6 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
-import com.mlomb.freetypejni.Utils.Pointer;
+import com.mlomb.freetype.Utils.Pointer;
 
 public class SizeMetrics extends Pointer {
 

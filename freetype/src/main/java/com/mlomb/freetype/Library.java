@@ -1,10 +1,10 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
-import com.mlomb.freetypejni.Utils.Pointer;
+import com.mlomb.freetype.Utils.Pointer;
 
 /** Each library is completely independent from the others; it is the 'root' of a set of objects like fonts, faces, sizes, etc. */
 public class Library extends Pointer {

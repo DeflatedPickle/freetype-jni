@@ -1,8 +1,8 @@
-package com.mlomb.freetypejni;
+package com.mlomb.freetype;
 
 import java.nio.ByteBuffer;
 
-import com.mlomb.freetypejni.GlyphSlot.Advance;
+import com.mlomb.freetype.GlyphSlot.Advance;
 
 public class FreeType {
 
@@ -131,9 +131,9 @@ public class FreeType {
 				int bits = 86;
 				if (System.getProperty("os.arch").contains("64"))
 					bits = 64;
-				System.loadLibrary("freetype-jni-" + bits);
+				System.loadLibrary("freetype" + bits);
 			} else if (System.getProperty("os.name").toLowerCase().indexOf("mac") >= 0) {
-				System.loadLibrary("freetype-jni");
+				System.loadLibrary("freetype");
 			} else
 				throw new Exception("Operating system not supported.");
 		} catch (UnsatisfiedLinkError e) {

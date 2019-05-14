@@ -1,0 +1,2 @@
+rootProject.name = 'freetype-jni'
+include "freetype", "jni", "example"
